@@ -23,7 +23,7 @@ public class LonelyTwitterActivity extends Activity {
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
 	private ListView oldTweetsList;
-	
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -39,21 +39,23 @@ public class LonelyTwitterActivity extends Activity {
 			public void onClick(View v) {
 				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
-				Tweet newestTweet = new NormalTweet(text, new Date(System.currentTimeMillis()));
+				Tweet newestTweet = new NormalTweet(text);
 				try {
 					newestTweet.setMessage("length abiding message");
 				}
-				catch (TweetTooLongException tweetlong){
-					//catches the tweet too long exceptions
+				catch (TweetTooLongException tweetlong) {
+					// catches the tweet too long exceptions
 				}
 				catch (Exception e) {
-					// Catches any other exception that might occur during execution
+					// catches any other exception that might occur during
+					// execution
 					System.err.print("This text was too long: " + text);
 					// Do something to solve the issue!
 				}
 
-                // TODO, if
-
+				if (newestTweet.isImportant()) {
+					// do something important
+				}
 				saveInFile(text, new Date(System.currentTimeMillis()));
 				finish();
 
@@ -91,7 +93,7 @@ public class LonelyTwitterActivity extends Activity {
 		}
 		return tweets.toArray(new String[tweets.size()]);
 	}
-	
+
 	private void saveInFile(String text, Date date) {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
