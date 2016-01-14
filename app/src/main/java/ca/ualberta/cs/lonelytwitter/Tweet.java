@@ -1,17 +1,21 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
  * Created by bhoang2 on 1/14/16.
  */
 public abstract class Tweet {
-    public String message;
+    protected String message;
     private Date date;
+    private ArrayList<Mood> mood ;
 
     public Tweet(String message, Date date) {
         this.message = message;
         this.date = date;
+        Mood happy = new HappyMood("happy");
+        mood.add(happy);
     }
 
     public Tweet(String message) {

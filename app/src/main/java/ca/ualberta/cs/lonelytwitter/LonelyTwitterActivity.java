@@ -39,6 +39,7 @@ public class LonelyTwitterActivity extends Activity {
 			public void onClick(View v) {
 				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
+
 				Tweet newestTweet = new NormalTweet(text);
 				try {
 					newestTweet.setMessage("length abiding message");
@@ -47,8 +48,7 @@ public class LonelyTwitterActivity extends Activity {
 					// catches the tweet too long exceptions
 				}
 				catch (Exception e) {
-					// catches any other exception that might occur during
-					// execution
+					// catches any other exception that might occur during execution
 					System.err.print("This text was too long: " + text);
 					// Do something to solve the issue!
 				}
