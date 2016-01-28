@@ -135,7 +135,7 @@ public class LonelyTwitterActivity extends Activity {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             throw new RuntimeException();
-            }
+        }
 
     }
 

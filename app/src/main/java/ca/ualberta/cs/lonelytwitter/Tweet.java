@@ -21,7 +21,6 @@ public abstract class Tweet {
     public Tweet(String message) {
         this.message = message;
         this.date = new Date(System.currentTimeMillis());
-        // TODO, set the date with a call to the date object
     }
 
     public Date getDate(){
@@ -37,6 +36,10 @@ public abstract class Tweet {
 
     public void setDate(Date date){
         this.date = date;
+    }
+
+    public String getMessage() {
+        return this.message;
     }
 
     abstract public boolean isImportant();
