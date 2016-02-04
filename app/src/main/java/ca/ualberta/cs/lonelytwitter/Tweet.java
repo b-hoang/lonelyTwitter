@@ -4,14 +4,23 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * Created by bhoang2 on 1/14/16.
+ * This class is the main object we will be using in this app. <br> A tweet comprises of
+ * a message, date, and mood. <br>
+ *
+ *
  */
 public abstract class Tweet {
+    // Instantiates variables
     protected String message;
     private Date date;
     private ArrayList<Mood> mood ;
 
     public Tweet(String message, Date date) {
+        /**
+         *
+         * @param String message, Date date
+         *
+         */
         this.message = message;
         this.date = date;
         Mood happy = new HappyMood("happy");

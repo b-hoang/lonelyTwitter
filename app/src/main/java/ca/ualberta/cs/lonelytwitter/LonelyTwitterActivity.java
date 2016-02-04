@@ -16,6 +16,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -30,19 +31,107 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * The main activity for a small Twitter app to capture, <br>notes and comments.
+ * <p>It saves the input tweets in the form of json files.</p><br>
+ *     A sample code as: <br>
+ *         <code>
+ *             for (int i = 0; i < 10; i++){
+ *                 for (int j = 0; j < 10; j++){
+ *                     doSomething();
+ *                 }
+ *             }
+ *         </code> <br>
+ * The list of important activities in this class are as follows: <br>
+ *     <ul>
+ *         <li>item 1</li>
+ *         <li>item 2</li>
+ *         <li>item 3</li>
+ *         <li>item 4</li>
+ *     </ul>
+ * @see NormalTweet
+ * @see java.awt
+ * @author Bruce Hoang
+ * @version 2.1
+ *
+ */
+
 public class LonelyTwitterActivity extends Activity {
 
+    /**
+     * @see Tweet
+     */
+    static int MAXIMUM_TWEET_SIZE = 100;
     private static final String FILENAME = "file.sav";
     private EditText bodyText;
     private ListView oldTweetsList;
 
     private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
     private ArrayAdapter<Tweet> adapter;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
+
+    private int calculateTweetSize() {
+        /**
+         * This method returns the size of the tweet.
+         * @return size of the tweet
+         */
+        return -1;
+    }
+
+    public String removeStopWords() {
+        // Do Something...
+        return "";
+    }
+
+    public String doSomething(String text1, String text2, String text3, String text4){
+        /**
+         *
+         * @return concatenation of ...
+         * @param text1 The text for the directory name.
+         * @param text2 The file name.
+         * @param text3 The extension.
+         * @param text4
+         * @throws
+         * @exception IllegalAccessError
+         * This happens if ...
+         * @exception java.util.InvalidPropertiesFormatException
+         * This happens if ...
+         *
+         */
+        return "";
+    };
+
+    private void startSecondActivity(Intent intent) {
+        // Run the second Aci5tiity
+
+    }
+
+    protected boolean evlauteOtherActivity(Intent intent){
+        // Do something
+        String expression1 = "",
+                expression2 = "",
+                expression3 = "",
+                expression4 = "";
+        int count = 10;
+        String expression = doSomething(expression1, expression2,
+                doSomething(expression3, expression4, expression3,
+                        expression4), expression1);
+
+        for (int i = 0; i < count; i++) {
+            try {
+                int j = 1;
+                int k = 2;
+                int count2 = 0;
+                if (j < k) {
+                    doSomething("", "", "", "");
+                } else if (true) {
+                    doSomething("a", "", "", "");
+                }
+            }
+            catch (Exception e) {
+            }
+        }
+        return true;
+    }
 
     /**
      * Called when the activity is first created.
@@ -88,33 +177,15 @@ public class LonelyTwitterActivity extends Activity {
 
             }
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
+
         adapter = new ArrayAdapter<Tweet>(this, R.layout.list_item, tweets);
         oldTweetsList.setAdapter(adapter);
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "LonelyTwitter Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://ca.ualberta.cs.lonelytwitter/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
     }
 
     private void loadFromFile() {
@@ -177,20 +248,5 @@ public class LonelyTwitterActivity extends Activity {
     @Override
     public void onStop() {
         super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "LonelyTwitter Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://ca.ualberta.cs.lonelytwitter/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
     }
 }
