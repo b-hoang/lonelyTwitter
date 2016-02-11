@@ -1,6 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Collections;
 import java.util.Date;
 
@@ -67,4 +68,29 @@ public class TweetList {
 
 
 
+=======
+
+/**
+ * Created by watts1 on 1/26/16.
+ */
+public class TweetList {
+    private ArrayList<Tweet> tweets= new ArrayList<Tweet>();
+
+    public void add(Tweet tweet){
+        tweets.add(tweet);
+    }
+
+    public boolean hasTweet(Tweet tweet){
+        return tweets.contains(tweet);
+    }
+
+    public Tweet getTweet(int index){
+        return tweets.get(index);
+    }
+
+    public void delete(Tweet tweet){
+        tweets.remove(tweet);
+    }
+
+>>>>>>> a757e189330a36fefba1f16891d5406b83d2fa9d
 }

@@ -23,5 +23,9 @@ android {
 
 dependencies {
     compile 'com.google.code.gson:gson:2.5'
+<<<<<<< HEAD
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+=======
+    compile 'com.android.support:appcompat-v7:18.0.0'
+>>>>>>> a757e189330a36fefba1f16891d5406b83d2fa9d
 }
