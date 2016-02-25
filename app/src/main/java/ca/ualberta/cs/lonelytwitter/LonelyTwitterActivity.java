@@ -62,7 +62,7 @@ public class LonelyTwitterActivity extends Activity {
                 // TODO: Replace with Elasticsearch
                 ElasticsearchTweetController.AddTweetTask addTweetTask = new ElasticsearchTweetController.AddTweetTask();
                 addTweetTask.execute(latestTweet);
-//                Elagit brsticsearchTweetController.addTweet(latestTweet);
+//                ElasticsearchTweetController.addTweet(latestTweet);
 //                saveInFile();
 
                 setResult(RESULT_OK);
