@@ -18,29 +18,25 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int body=0x7f060007;
-        public static final int button_cancel=0x7f060003;
-        public static final int button_ok=0x7f060002;
-        public static final int clear=0x7f060008;
-        public static final int editText_tweet=0x7f060001;
-        public static final int hello=0x7f060006;
-        public static final int oldTweetsList=0x7f060005;
-        public static final int oldTweetsTitle=0x7f060004;
-        public static final int save=0x7f060009;
-        public static final int textView=0x7f060000;
+        public static final int clearButton=0x7f060005;
+        public static final int hello=0x7f060002;
+        public static final int pictureButton=0x7f060004;
+        public static final int saveButton=0x7f060006;
+        public static final int tweetDate=0x7f060007;
+        public static final int tweetMessage=0x7f060003;
+        public static final int tweetText=0x7f060008;
+        public static final int tweetsList=0x7f060001;
+        public static final int tweetsTitle=0x7f060000;
     }
     public static final class layout {
-        public static final int activity_edit_tweet=0x7f030000;
-        public static final int list_item=0x7f030001;
-        public static final int main=0x7f030002;
+        public static final int list_item=0x7f030000;
+        public static final int main=0x7f030001;
+        public static final int tweet=0x7f030002;
     }
     public static final class string {
-        public static final int action_settings=0x7f050000;
-        public static final int app_name=0x7f050001;
-        public static final int clear=0x7f050002;
-        public static final int hello=0x7f050003;
-        public static final int hello_world=0x7f050004;
-        public static final int save=0x7f050005;
-        public static final int title_activity_edit_tweet=0x7f050006;
+        public static final int app_name=0x7f050000;
+        public static final int clear=0x7f050001;
+        public static final int hello=0x7f050002;
+        public static final int save=0x7f050003;
     }
 }

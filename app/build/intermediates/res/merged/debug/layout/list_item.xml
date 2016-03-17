@@ -4,5 +4,6 @@
     android:layout_height="fill_parent"
     android:padding="10dp"
     android:textSize="16sp" >
+
 </TextView>
 <!-- From: file:/afs/ualberta.ca/home/b/h/bhoang2/Projects/lonelyTwitter/app/src/main/res/layout/list_item.xml -->
